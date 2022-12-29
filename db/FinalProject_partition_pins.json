@@ -1,0 +1,145 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SD0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SD0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SD0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SD0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SD1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SD1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SD1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SD1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SD2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SD2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SD2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SD2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SD3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SD3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SD3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SD3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "inCorrect",
+					"strict" : false
+				},
+				{
+					"name" : "AnsCorrect",
+					"strict" : false
+				},
+				{
+					"name" : "ACounter[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ACounter[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ACounter[2]",
+					"strict" : false
+				},
+				{
+					"name" : "BCounter[0]",
+					"strict" : false
+				},
+				{
+					"name" : "BCounter[1]",
+					"strict" : false
+				},
+				{
+					"name" : "BCounter[2]",
+					"strict" : false
+				},
+				{
+					"name" : "reachS5",
+					"strict" : false
+				},
+				{
+					"name" : "in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "check",
+					"strict" : false
+				},
+				{
+					"name" : "start",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "valid",
+					"strict" : false
+				},
+				{
+					"name" : "divClk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
