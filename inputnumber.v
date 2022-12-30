@@ -5,12 +5,6 @@ output nonerror;
 reg nonerror;
 reg [3:0] num;
 
-//reg [3:0] temp_num;
-//reg pushed;
-//reg [4:0] checknum;
-//reg [4:0] test;
-
-
 always @(SW)begin
 	case(SW)
 	10'd1: num = 4'd0;

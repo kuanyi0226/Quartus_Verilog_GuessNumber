@@ -1,3 +1,4 @@
+//Final Version
 module FinalProject(
 	SW, checkButt, startButt, resetButt, clock,
 	Seven0,Seven1,Seven2,Seven3, dot_row, dot_col);
@@ -17,7 +18,7 @@ wire [6:0] Seven0_AB, Seven1_AB, Seven2_AB, Seven3_AB; //?A?B
 wire [6:0] Seven0_Num, Seven1_Num, Seven2_Num, Seven3_Num; //Current Input Numbers
 
 //Part1
-inputnumber inNum(.nonerror(valid),.num(num_4bit),.SW(SW),.check(checkButt));
+inputnumber inNum(.nonerror(valid),.num(num_4bit),.SW(SW));
 //Part2
 FinalProjectPart2 FP2(.in(num_4bit), .valid(valid), .check(checkButt),.start(startButt),.reset(resetButt),.divClk(clock),
 	.SD0(Seven0_4bit),.SD1(Seven1_4bit),.SD2(Seven2_4bit),.SD3(Seven3_4bit),

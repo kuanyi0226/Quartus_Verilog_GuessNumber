@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FinalProject
-Fri Dec 30 13:08:58 2022
+Fri Dec 30 13:56:42 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -56,7 +56,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Dec 30 13:08:58 2022       ;
+; Analysis & Synthesis Status     ; Successful - Fri Dec 30 13:56:42 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; FinalProject                                ;
 ; Top-level Entity Name           ; FinalProject                                ;
@@ -641,7 +641,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:08     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -651,7 +651,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Dec 30 13:08:31 2022
+    Info: Processing started: Fri Dec 30 13:56:30 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProject -c FinalProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -673,7 +673,7 @@ Critical Warning (10846): Verilog HDL Instantiation warning at FinalProject.v(33
 Critical Warning (10846): Verilog HDL Instantiation warning at FinalProject.v(36): instance has no name File: C:/Verilog/FinalProject/FinalProject.v Line: 36
 Info (12127): Elaborating entity "FinalProject" for the top level hierarchy
 Info (12128): Elaborating entity "inputnumber" for hierarchy "inputnumber:inNum" File: C:/Verilog/FinalProject/FinalProject.v Line: 20
-Info (10264): Verilog HDL Case Statement information at inputnumber.v(16): all case item expressions in this case statement are onehot File: C:/Verilog/FinalProject/inputnumber.v Line: 16
+Info (10264): Verilog HDL Case Statement information at inputnumber.v(9): all case item expressions in this case statement are onehot File: C:/Verilog/FinalProject/inputnumber.v Line: 9
 Info (12128): Elaborating entity "FinalProjectPart2" for hierarchy "FinalProjectPart2:FP2" File: C:/Verilog/FinalProject/FinalProject.v Line: 24
 Warning (10230): Verilog HDL assignment warning at FinalProjectPart2.v(34): truncated value with size 32 to match size of target (16) File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 34
 Warning (10240): Verilog HDL Always Construct warning at FinalProjectPart2.v(28): inferring latch(es) for variable "answer", which holds its previous value in one or more paths through the always construct File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 28
@@ -750,9 +750,9 @@ Info (21057): Implemented 424 device resources after synthesis - the final resou
     Info (21059): Implemented 44 output pins
     Info (21061): Implemented 366 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 4914 megabytes
-    Info: Processing ended: Fri Dec 30 13:08:58 2022
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:55
+    Info: Peak virtual memory: 4911 megabytes
+    Info: Processing ended: Fri Dec 30 13:56:42 2022
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:24
 
 
