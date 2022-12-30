@@ -2,116 +2,292 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'clock'
-Slack : -5.186
-TNS   : -113.302
-
 Type  : Slow 1100mV 85C Model Setup 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
-Slack : -1.750
-TNS   : -25.271
+Slack : -11.424
+TNS   : -113.149
+
+Type  : Slow 1100mV 85C Model Setup 'checkButt'
+Slack : -9.765
+TNS   : -202.372
+
+Type  : Slow 1100mV 85C Model Setup 'clock'
+Slack : -7.951
+TNS   : -254.615
+
+Type  : Slow 1100mV 85C Model Setup 'startButt'
+Slack : -6.320
+TNS   : -115.904
+
+Type  : Slow 1100mV 85C Model Hold 'checkButt'
+Slack : -1.693
+TNS   : -10.537
+
+Type  : Slow 1100mV 85C Model Hold 'startButt'
+Slack : -0.555
+TNS   : -1.240
 
 Type  : Slow 1100mV 85C Model Hold 'clock'
-Slack : 0.438
+Slack : 0.422
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
-Slack : 0.778
+Slack : 0.685
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'checkButt'
+Slack : -3.757
+TNS   : -121.173
+
+Type  : Slow 1100mV 85C Model Recovery 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
+Slack : -2.816
+TNS   : -42.246
+
+Type  : Slow 1100mV 85C Model Recovery 'clock'
+Slack : -1.818
+TNS   : -20.377
+
+Type  : Slow 1100mV 85C Model Removal 'checkButt'
+Slack : -4.037
+TNS   : -37.796
+
+Type  : Slow 1100mV 85C Model Removal 'clock'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
+Slack : 1.608
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock'
 Slack : -0.538
-TNS   : -25.668
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
-Slack : -0.538
-TNS   : -15.636
+TNS   : -47.396
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'checkButt'
 Slack : -0.538
-TNS   : -0.788
+TNS   : -31.307
 
-Type  : Slow 1100mV 0C Model Setup 'clock'
-Slack : -5.334
-TNS   : -112.667
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
+Slack : -0.538
+TNS   : -15.959
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'startButt'
+Slack : -0.067
+TNS   : -0.150
 
 Type  : Slow 1100mV 0C Model Setup 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
-Slack : -1.823
-TNS   : -25.571
+Slack : -11.409
+TNS   : -112.532
+
+Type  : Slow 1100mV 0C Model Setup 'checkButt'
+Slack : -9.716
+TNS   : -195.104
+
+Type  : Slow 1100mV 0C Model Setup 'clock'
+Slack : -7.808
+TNS   : -245.805
+
+Type  : Slow 1100mV 0C Model Setup 'startButt'
+Slack : -6.069
+TNS   : -118.975
+
+Type  : Slow 1100mV 0C Model Hold 'checkButt'
+Slack : -1.718
+TNS   : -10.538
+
+Type  : Slow 1100mV 0C Model Hold 'startButt'
+Slack : -0.555
+TNS   : -0.731
 
 Type  : Slow 1100mV 0C Model Hold 'clock'
-Slack : 0.161
+Slack : 0.381
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
-Slack : 0.780
+Slack : 0.655
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'checkButt'
+Slack : -3.483
+TNS   : -111.956
+
+Type  : Slow 1100mV 0C Model Recovery 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
+Slack : -2.808
+TNS   : -42.742
+
+Type  : Slow 1100mV 0C Model Recovery 'clock'
+Slack : -1.564
+TNS   : -17.507
+
+Type  : Slow 1100mV 0C Model Removal 'checkButt'
+Slack : -4.000
+TNS   : -42.316
+
+Type  : Slow 1100mV 0C Model Removal 'clock'
+Slack : 0.212
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
+Slack : 1.599
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock'
 Slack : -0.538
-TNS   : -26.452
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
-Slack : -0.538
-TNS   : -15.585
+TNS   : -48.451
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'checkButt'
 Slack : -0.538
-TNS   : -0.794
+TNS   : -31.037
 
-Type  : Fast 1100mV 85C Model Setup 'clock'
-Slack : -2.734
-TNS   : -43.503
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
+Slack : -0.538
+TNS   : -15.751
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'startButt'
+Slack : -0.045
+TNS   : -0.092
 
 Type  : Fast 1100mV 85C Model Setup 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
-Slack : -0.623
-TNS   : -8.581
+Slack : -5.915
+TNS   : -57.717
+
+Type  : Fast 1100mV 85C Model Setup 'checkButt'
+Slack : -4.399
+TNS   : -80.871
+
+Type  : Fast 1100mV 85C Model Setup 'clock'
+Slack : -3.906
+TNS   : -122.497
+
+Type  : Fast 1100mV 85C Model Setup 'startButt'
+Slack : -2.794
+TNS   : -46.360
+
+Type  : Fast 1100mV 85C Model Hold 'checkButt'
+Slack : -0.926
+TNS   : -5.735
+
+Type  : Fast 1100mV 85C Model Hold 'startButt'
+Slack : -0.413
+TNS   : -0.712
 
 Type  : Fast 1100mV 85C Model Hold 'clock'
-Slack : 0.201
+Slack : 0.020
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
-Slack : 0.304
+Slack : 0.262
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'checkButt'
+Slack : -1.655
+TNS   : -52.227
+
+Type  : Fast 1100mV 85C Model Recovery 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
+Slack : -1.643
+TNS   : -25.201
+
+Type  : Fast 1100mV 85C Model Recovery 'clock'
+Slack : -0.932
+TNS   : -10.348
+
+Type  : Fast 1100mV 85C Model Removal 'checkButt'
+Slack : -2.142
+TNS   : -12.552
+
+Type  : Fast 1100mV 85C Model Removal 'clock'
+Slack : -0.101
+TNS   : -0.813
+
+Type  : Fast 1100mV 85C Model Removal 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
+Slack : 0.592
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock'
-Slack : -0.528
-TNS   : -3.733
+Slack : -0.371
+TNS   : -5.958
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'checkButt'
-Slack : -0.252
-TNS   : -0.252
+Slack : -0.271
+TNS   : -12.081
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'startButt'
+Slack : -0.204
+TNS   : -7.374
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
-Slack : 0.045
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Setup 'clock'
-Slack : -2.453
-TNS   : -37.180
+Slack : -0.005
+TNS   : -0.026
 
 Type  : Fast 1100mV 0C Model Setup 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
-Slack : -0.507
-TNS   : -6.881
+Slack : -5.679
+TNS   : -54.607
+
+Type  : Fast 1100mV 0C Model Setup 'checkButt'
+Slack : -3.713
+TNS   : -68.389
+
+Type  : Fast 1100mV 0C Model Setup 'clock'
+Slack : -3.435
+TNS   : -106.885
+
+Type  : Fast 1100mV 0C Model Setup 'startButt'
+Slack : -2.400
+TNS   : -41.119
+
+Type  : Fast 1100mV 0C Model Hold 'checkButt'
+Slack : -1.025
+TNS   : -6.584
+
+Type  : Fast 1100mV 0C Model Hold 'startButt'
+Slack : -0.366
+TNS   : -0.616
 
 Type  : Fast 1100mV 0C Model Hold 'clock'
-Slack : 0.023
-TNS   : 0.000
+Slack : -0.085
+TNS   : -0.113
 
 Type  : Fast 1100mV 0C Model Hold 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
-Slack : 0.276
+Slack : 0.229
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
+Slack : -1.602
+TNS   : -24.751
+
+Type  : Fast 1100mV 0C Model Recovery 'checkButt'
+Slack : -1.185
+TNS   : -37.374
+
+Type  : Fast 1100mV 0C Model Recovery 'clock'
+Slack : -0.809
+TNS   : -8.964
+
+Type  : Fast 1100mV 0C Model Removal 'checkButt'
+Slack : -2.130
+TNS   : -20.369
+
+Type  : Fast 1100mV 0C Model Removal 'clock'
+Slack : -0.201
+TNS   : -2.023
+
+Type  : Fast 1100mV 0C Model Removal 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
+Slack : 0.581
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock'
-Slack : -0.497
-TNS   : -3.662
+Slack : -0.365
+TNS   : -6.057
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'checkButt'
-Slack : -0.267
-TNS   : -0.267
+Slack : -0.279
+TNS   : -12.289
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'startButt'
+Slack : -0.183
+TNS   : -7.163
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_div_dot_matrix:div_clk|clk_div_dot_matrix'
-Slack : 0.055
+Slack : 0.024
 TNS   : 0.000
 
 ------------------------------------------------------------

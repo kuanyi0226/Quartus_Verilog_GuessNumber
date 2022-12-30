@@ -25,7 +25,7 @@ FinalProjectPart2 FP2(.in(num_4bit), .valid(valid), .check(checkButt),.start(sta
 //Part3
 //(dot matrix)
 clk_div_dot_matrix div_clk(.clk(clock), .rst(startButt), .clk_div_dot_matrix(divClk_dot));
-DotMatrixDisplay dot(.clk_div(divClk_dot), .rst(startButt), .inCorrect(inCorrect),
+DotMatrixDisplay dot(.reachS5(reachS5),.clk_div(divClk_dot), .rst(startButt), .inCorrect(inCorrect),
 					.ansCorrect(AnsCorrect), .dot_row(dot_row), .dot_col(dot_col));
 
 //(seven display)

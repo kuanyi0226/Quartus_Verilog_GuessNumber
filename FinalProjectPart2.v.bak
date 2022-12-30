@@ -124,7 +124,7 @@ always@(negedge reset or negedge start or negedge check)begin
 		SD2 <= 4'd15;
 		SD3 <= 4'd15;
 	end
-	else if(!check && valid) // check
+	else if(!check) // check
 	begin
 		case(state)
 			S0:begin
@@ -134,22 +134,22 @@ always@(negedge reset or negedge start or negedge check)begin
 				SD3 <= 4'd15;
 			end
 			S1:begin
-				SD0 <= in;
-				SD1 <= SD0;
+				SD0 <= SD0;
+				SD1 <= in;
 				SD2 <= 4'd15;
 				SD3 <= 4'd15;
 			end
 			S2:begin
-				SD0 <= in;
-				SD1 <= SD0;
-				SD2 <= SD1;
+				SD0 <= SD0;
+				SD1 <= SD1;
+				SD2 <= in;
 				SD3 <= 4'd15;
 			end
 			S3:begin
-				SD0 <= in;
-				SD1 <= SD0;
-				SD2 <= SD1;
-				SD3 <= SD2;
+				SD0 <= SD0;
+				SD1 <= SD1;
+				SD2 <= SD2;
+				SD3 <= in;
 			end
 			S4:begin
 				SD0 <= 4'd15; //B
@@ -188,6 +188,6 @@ assign ACounter = countA;
 assign BCounter = countB;
 
 assign reachS5 = (state == S5) ? 1'b1 : 1'b0;
-assign AnsCorrect = (ACounter == 3'd4 && state == S5) ? 1'b1 : 1'b0;
+assign AnsCorrect = (ACounter == 2'd4 && state == S5) ? 1'b1 : 1'b0;
 
 endmodule 

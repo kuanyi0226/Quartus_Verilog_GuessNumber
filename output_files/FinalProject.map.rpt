@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FinalProject
-Fri Dec 30 10:49:14 2022
+Fri Dec 30 13:08:58 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,17 +14,23 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |FinalProject|FinalProjectPart2:FP2|state
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
  11. General Register Statistics
  12. Inverted Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
  14. Parameter Settings for User Entity Instance: FinalProjectPart2:FP2
  15. Parameter Settings for User Entity Instance: DotMatrixDisplay:dot
- 16. Port Connectivity Checks: "inputnumber:inNum"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+ 16. Parameter Settings for Inferred Entity Instance: FinalProjectPart2:FP2|lpm_divide:Mod4
+ 17. Parameter Settings for Inferred Entity Instance: FinalProjectPart2:FP2|lpm_divide:Mod1
+ 18. Parameter Settings for Inferred Entity Instance: FinalProjectPart2:FP2|lpm_divide:Mod5
+ 19. Parameter Settings for Inferred Entity Instance: FinalProjectPart2:FP2|lpm_divide:Mod2
+ 20. Parameter Settings for Inferred Entity Instance: FinalProjectPart2:FP2|lpm_divide:Mod6
+ 21. Parameter Settings for Inferred Entity Instance: FinalProjectPart2:FP2|lpm_divide:Mod3
+ 22. Parameter Settings for Inferred Entity Instance: FinalProjectPart2:FP2|lpm_divide:Mod0
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
 
 
 
@@ -50,13 +56,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Dec 30 10:49:14 2022       ;
+; Analysis & Synthesis Status     ; Successful - Fri Dec 30 13:08:58 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; FinalProject                                ;
 ; Top-level Entity Name           ; FinalProject                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 53                                          ;
+; Total registers                 ; 119                                         ;
 ; Total pins                      ; 58                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -174,19 +180,26 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                               ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                 ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------+---------+
-; FinalProject.v                   ; yes             ; User Verilog HDL File  ; C:/Verilog/FinalProject/FinalProject.v       ;         ;
-; FinalProjectPart2.v              ; yes             ; User Verilog HDL File  ; C:/Verilog/FinalProject/FinalProjectPart2.v  ;         ;
-; inputnumber.v                    ; yes             ; User Verilog HDL File  ; C:/Verilog/FinalProject/inputnumber.v        ;         ;
-; DotMatrixDisplay.v               ; yes             ; User Verilog HDL File  ; C:/Verilog/FinalProject/DotMatrixDisplay.v   ;         ;
-; clk_div_dot_matrix.v             ; yes             ; User Verilog HDL File  ; C:/Verilog/FinalProject/clk_div_dot_matrix.v ;         ;
-; ABSevenDisplay.v                 ; yes             ; User Verilog HDL File  ; C:/Verilog/FinalProject/ABSevenDisplay.v     ;         ;
-; NumberSevenDisplay.v             ; yes             ; User Verilog HDL File  ; C:/Verilog/FinalProject/NumberSevenDisplay.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; FinalProject.v                   ; yes             ; User Verilog HDL File        ; C:/Verilog/FinalProject/FinalProject.v                                     ;         ;
+; FinalProjectPart2.v              ; yes             ; User Verilog HDL File        ; C:/Verilog/FinalProject/FinalProjectPart2.v                                ;         ;
+; inputnumber.v                    ; yes             ; User Verilog HDL File        ; C:/Verilog/FinalProject/inputnumber.v                                      ;         ;
+; DotMatrixDisplay.v               ; yes             ; User Verilog HDL File        ; C:/Verilog/FinalProject/DotMatrixDisplay.v                                 ;         ;
+; clk_div_dot_matrix.v             ; yes             ; User Verilog HDL File        ; C:/Verilog/FinalProject/clk_div_dot_matrix.v                               ;         ;
+; ABSevenDisplay.v                 ; yes             ; User Verilog HDL File        ; C:/Verilog/FinalProject/ABSevenDisplay.v                                   ;         ;
+; NumberSevenDisplay.v             ; yes             ; User Verilog HDL File        ; C:/Verilog/FinalProject/NumberSevenDisplay.v                               ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc      ;         ;
+; db/lpm_divide_42m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Verilog/FinalProject/db/lpm_divide_42m.tdf                              ;         ;
+; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Verilog/FinalProject/db/sign_div_unsign_7kh.tdf                         ;         ;
+; db/alt_u_div_kse.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Verilog/FinalProject/db/alt_u_div_kse.tdf                               ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -194,38 +207,68 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 32          ;
+; Estimate of Logic utilization (ALMs needed) ; 204         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 57          ;
-;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 6           ;
-;     -- 5 input functions                    ; 0           ;
-;     -- 4 input functions                    ; 1           ;
-;     -- <=3 input functions                  ; 50          ;
+; Combinational ALUT usage for logic          ; 346         ;
+;     -- 7 input functions                    ; 7           ;
+;     -- 6 input functions                    ; 52          ;
+;     -- 5 input functions                    ; 54          ;
+;     -- 4 input functions                    ; 61          ;
+;     -- <=3 input functions                  ; 172         ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 53          ;
+; Dedicated logic registers                   ; 119         ;
 ;                                             ;             ;
 ; I/O pins                                    ; 58          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 33          ;
-; Total fan-out                               ; 385         ;
-; Average fan-out                             ; 1.70        ;
+; Maximum fan-out                             ; 61          ;
+; Total fan-out                               ; 1770        ;
+; Average fan-out                             ; 3.05        ;
 +---------------------------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                     ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+--------------------+--------------+
-; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Entity Name        ; Library Name ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+--------------------+--------------+
-; |FinalProject                   ; 57 (0)              ; 53 (0)                    ; 0                 ; 0          ; 58   ; 0            ; |FinalProject                            ; FinalProject       ; work         ;
-;    |DotMatrixDisplay:dot|       ; 15 (15)             ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|DotMatrixDisplay:dot       ; DotMatrixDisplay   ; work         ;
-;    |FinalProjectPart2:FP2|      ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2      ; FinalProjectPart2  ; work         ;
-;    |clk_div_dot_matrix:div_clk| ; 41 (41)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|clk_div_dot_matrix:div_clk ; clk_div_dot_matrix ; work         ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+--------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                           ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                 ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |FinalProject                             ; 346 (22)            ; 119 (0)                   ; 0                 ; 0          ; 58   ; 0            ; |FinalProject                                                                                                                       ; FinalProject        ; work         ;
+;    |DotMatrixDisplay:dot|                 ; 22 (22)             ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|DotMatrixDisplay:dot                                                                                                  ; DotMatrixDisplay    ; work         ;
+;    |FinalProjectPart2:FP2|                ; 221 (179)           ; 67 (67)                   ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2                                                                                                 ; FinalProjectPart2   ; work         ;
+;       |lpm_divide:Mod0|                   ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_42m:auto_generated|  ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m      ; work         ;
+;             |sign_div_unsign_7kh:divider| ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                |alt_u_div_kse:divider|    ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+;       |lpm_divide:Mod1|                   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_42m:auto_generated|  ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod1|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m      ; work         ;
+;             |sign_div_unsign_7kh:divider| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod1|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                |alt_u_div_kse:divider|    ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod1|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+;       |lpm_divide:Mod2|                   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_42m:auto_generated|  ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod2|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m      ; work         ;
+;             |sign_div_unsign_7kh:divider| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod2|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                |alt_u_div_kse:divider|    ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod2|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+;       |lpm_divide:Mod3|                   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod3                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_42m:auto_generated|  ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod3|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m      ; work         ;
+;             |sign_div_unsign_7kh:divider| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod3|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                |alt_u_div_kse:divider|    ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod3|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+;       |lpm_divide:Mod4|                   ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod4                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_42m:auto_generated|  ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod4|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m      ; work         ;
+;             |sign_div_unsign_7kh:divider| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod4|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                |alt_u_div_kse:divider|    ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod4|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+;       |lpm_divide:Mod5|                   ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod5                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_42m:auto_generated|  ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod5|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m      ; work         ;
+;             |sign_div_unsign_7kh:divider| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod5|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                |alt_u_div_kse:divider|    ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod5|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+;       |lpm_divide:Mod6|                   ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod6                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_42m:auto_generated|  ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod6|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m      ; work         ;
+;             |sign_div_unsign_7kh:divider| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod6|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                |alt_u_div_kse:divider|    ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|FinalProjectPart2:FP2|lpm_divide:Mod6|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+;    |NumberSevenDisplay:comb_4|            ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|NumberSevenDisplay:comb_4                                                                                             ; NumberSevenDisplay  ; work         ;
+;    |clk_div_dot_matrix:div_clk|           ; 41 (41)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|clk_div_dot_matrix:div_clk                                                                                            ; clk_div_dot_matrix  ; work         ;
+;    |inputnumber:inNum|                    ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FinalProject|inputnumber:inNum                                                                                                     ; inputnumber         ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -244,63 +287,47 @@ Encoding Type:  One-Hot
 +----------+----------+----------+----------+----------+----------+----------+
 
 
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; FinalProjectPart2:FP2|inCorrect        ; Stuck at GND due to stuck port data_in      ;
-; FinalProjectPart2:FP2|In0[0..3]        ; Stuck at VCC due to stuck port clock_enable ;
-; FinalProjectPart2:FP2|In1[0..3]        ; Stuck at VCC due to stuck port clock_enable ;
-; FinalProjectPart2:FP2|In2[0..3]        ; Stuck at VCC due to stuck port clock_enable ;
-; FinalProjectPart2:FP2|In3[0..3]        ; Stuck at VCC due to stuck port clock_enable ;
-; FinalProjectPart2:FP2|SD0[1..3]        ; Merged with FinalProjectPart2:FP2|SD0[0]    ;
-; FinalProjectPart2:FP2|SD2[1..3]        ; Merged with FinalProjectPart2:FP2|SD2[0]    ;
-; FinalProjectPart2:FP2|state~5          ; Lost fanout                                 ;
-; FinalProjectPart2:FP2|state~6          ; Lost fanout                                 ;
-; FinalProjectPart2:FP2|state~7          ; Lost fanout                                 ;
-; FinalProjectPart2:FP2|state.S1         ; Merged with FinalProjectPart2:FP2|state.S0  ;
-; FinalProjectPart2:FP2|state.S2         ; Merged with FinalProjectPart2:FP2|state.S0  ;
-; FinalProjectPart2:FP2|state.S3         ; Merged with FinalProjectPart2:FP2|state.S0  ;
-; FinalProjectPart2:FP2|state.S4         ; Merged with FinalProjectPart2:FP2|state.S0  ;
-; FinalProjectPart2:FP2|state.S5         ; Merged with FinalProjectPart2:FP2|state.S0  ;
-; FinalProjectPart2:FP2|SD2[0]           ; Stuck at VCC due to stuck port data_in      ;
-; FinalProjectPart2:FP2|SD3[3]           ; Stuck at VCC due to stuck port data_in      ;
-; FinalProjectPart2:FP2|state.S0         ; Stuck at GND due to stuck port data_in      ;
-; FinalProjectPart2:FP2|SD1[0..3]        ; Stuck at VCC due to stuck port data_in      ;
-; FinalProjectPart2:FP2|SD3[0..2]        ; Stuck at VCC due to stuck port data_in      ;
-; FinalProjectPart2:FP2|A1[0..3]         ; Lost fanout                                 ;
-; FinalProjectPart2:FP2|A3[0..3]         ; Lost fanout                                 ;
-; FinalProjectPart2:FP2|A2[0..3]         ; Lost fanout                                 ;
-; FinalProjectPart2:FP2|counter[0..15]   ; Lost fanout                                 ;
-; Total Number of Removed Registers = 69 ;                                             ;
-+----------------------------------------+---------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                        ;
++-----------------------------------------------------+-----------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal         ; Free of Timing Hazards ;
++-----------------------------------------------------+-----------------------------+------------------------+
+; FinalProjectPart2:FP2|A0[0]                         ; FinalProjectPart2:FP2|A0[1] ; yes                    ;
+; FinalProjectPart2:FP2|A0[1]                         ; FinalProjectPart2:FP2|A0[1] ; yes                    ;
+; FinalProjectPart2:FP2|A0[2]                         ; FinalProjectPart2:FP2|A0[1] ; yes                    ;
+; FinalProjectPart2:FP2|A0[3]                         ; FinalProjectPart2:FP2|A0[1] ; yes                    ;
+; FinalProjectPart2:FP2|answer[4]                     ; startButt                   ; yes                    ;
+; FinalProjectPart2:FP2|lockAns                       ; FinalProjectPart2:FP2|A0[1] ; yes                    ;
+; FinalProjectPart2:FP2|answer[5]                     ; startButt                   ; yes                    ;
+; FinalProjectPart2:FP2|answer[6]                     ; startButt                   ; yes                    ;
+; FinalProjectPart2:FP2|answer[7]                     ; startButt                   ; yes                    ;
+; FinalProjectPart2:FP2|answer[8]                     ; startButt                   ; yes                    ;
+; FinalProjectPart2:FP2|answer[9]                     ; startButt                   ; yes                    ;
+; FinalProjectPart2:FP2|answer[10]                    ; startButt                   ; yes                    ;
+; FinalProjectPart2:FP2|answer[11]                    ; startButt                   ; yes                    ;
+; FinalProjectPart2:FP2|answer[12]                    ; startButt                   ; yes                    ;
+; FinalProjectPart2:FP2|answer[13]                    ; startButt                   ; yes                    ;
+; FinalProjectPart2:FP2|answer[14]                    ; startButt                   ; yes                    ;
+; FinalProjectPart2:FP2|answer[15]                    ; startButt                   ; yes                    ;
+; FinalProjectPart2:FP2|answer[0]                     ; startButt                   ; yes                    ;
+; FinalProjectPart2:FP2|answer[1]                     ; startButt                   ; yes                    ;
+; FinalProjectPart2:FP2|answer[2]                     ; startButt                   ; yes                    ;
+; FinalProjectPart2:FP2|answer[3]                     ; startButt                   ; yes                    ;
+; Number of user-specified and inferred latches = 21  ;                             ;                        ;
++-----------------------------------------------------+-----------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                             ;
-+--------------------------------+--------------------------------+-----------------------------------------------------------------------+
-; Register name                  ; Reason for Removal             ; Registers Removed due to This Register                                ;
-+--------------------------------+--------------------------------+-----------------------------------------------------------------------+
-; FinalProjectPart2:FP2|In0[3]   ; Stuck at VCC                   ; FinalProjectPart2:FP2|SD1[0], FinalProjectPart2:FP2|SD1[1],           ;
-;                                ; due to stuck port clock_enable ; FinalProjectPart2:FP2|SD1[2], FinalProjectPart2:FP2|SD3[0],           ;
-;                                ;                                ; FinalProjectPart2:FP2|SD3[1], FinalProjectPart2:FP2|SD3[2],           ;
-;                                ;                                ; FinalProjectPart2:FP2|A1[3], FinalProjectPart2:FP2|A1[2],             ;
-;                                ;                                ; FinalProjectPart2:FP2|A1[1], FinalProjectPart2:FP2|A1[0],             ;
-;                                ;                                ; FinalProjectPart2:FP2|A3[3], FinalProjectPart2:FP2|A3[2],             ;
-;                                ;                                ; FinalProjectPart2:FP2|A3[1], FinalProjectPart2:FP2|A3[0],             ;
-;                                ;                                ; FinalProjectPart2:FP2|A2[3], FinalProjectPart2:FP2|A2[2],             ;
-;                                ;                                ; FinalProjectPart2:FP2|A2[1], FinalProjectPart2:FP2|A2[0],             ;
-;                                ;                                ; FinalProjectPart2:FP2|counter[7], FinalProjectPart2:FP2|counter[6],   ;
-;                                ;                                ; FinalProjectPart2:FP2|counter[5], FinalProjectPart2:FP2|counter[4],   ;
-;                                ;                                ; FinalProjectPart2:FP2|counter[15], FinalProjectPart2:FP2|counter[14], ;
-;                                ;                                ; FinalProjectPart2:FP2|counter[13], FinalProjectPart2:FP2|counter[3],  ;
-;                                ;                                ; FinalProjectPart2:FP2|counter[2], FinalProjectPart2:FP2|counter[1],   ;
-;                                ;                                ; FinalProjectPart2:FP2|counter[0], FinalProjectPart2:FP2|counter[11],  ;
-;                                ;                                ; FinalProjectPart2:FP2|counter[10], FinalProjectPart2:FP2|counter[9]   ;
-; FinalProjectPart2:FP2|state.S0 ; Stuck at GND                   ; FinalProjectPart2:FP2|SD1[3]                                          ;
-;                                ; due to stuck port data_in      ;                                                                       ;
-+--------------------------------+--------------------------------+-----------------------------------------------------------------------+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; FinalProjectPart2:FP2|state~5         ; Lost fanout        ;
+; FinalProjectPart2:FP2|state~6         ; Lost fanout        ;
+; FinalProjectPart2:FP2|state~7         ; Lost fanout        ;
+; Total Number of Removed Registers = 3 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -308,32 +335,63 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 53    ;
+; Total registers                              ; 119   ;
 ; Number of registers using Synchronous Clear  ; 33    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 17    ;
+; Number of registers using Asynchronous Clear ; 66    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 66    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; FinalProjectPart2:FP2|SD0[0]           ; 6       ;
-; DotMatrixDisplay:dot|dot_row[0]        ; 1       ;
-; DotMatrixDisplay:dot|dot_row[1]        ; 1       ;
-; DotMatrixDisplay:dot|dot_row[2]        ; 1       ;
-; DotMatrixDisplay:dot|dot_row[3]        ; 1       ;
-; DotMatrixDisplay:dot|dot_row[4]        ; 1       ;
-; DotMatrixDisplay:dot|dot_row[5]        ; 1       ;
-; DotMatrixDisplay:dot|dot_row[6]        ; 1       ;
-; DotMatrixDisplay:dot|dot_row[7]        ; 1       ;
-; Total number of inverted registers = 9 ;         ;
-+----------------------------------------+---------+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; FinalProjectPart2:FP2|SD0[0]            ; 8       ;
+; FinalProjectPart2:FP2|SD0[1]            ; 8       ;
+; FinalProjectPart2:FP2|SD0[2]            ; 8       ;
+; FinalProjectPart2:FP2|SD0[3]            ; 8       ;
+; FinalProjectPart2:FP2|SD1[0]            ; 8       ;
+; FinalProjectPart2:FP2|SD1[1]            ; 8       ;
+; FinalProjectPart2:FP2|SD1[2]            ; 8       ;
+; FinalProjectPart2:FP2|SD1[3]            ; 9       ;
+; FinalProjectPart2:FP2|In0[3]            ; 4       ;
+; FinalProjectPart2:FP2|In0[0]            ; 4       ;
+; FinalProjectPart2:FP2|In0[1]            ; 4       ;
+; FinalProjectPart2:FP2|In0[2]            ; 4       ;
+; FinalProjectPart2:FP2|In1[3]            ; 4       ;
+; FinalProjectPart2:FP2|In1[0]            ; 4       ;
+; FinalProjectPart2:FP2|In1[1]            ; 4       ;
+; FinalProjectPart2:FP2|In1[2]            ; 4       ;
+; FinalProjectPart2:FP2|In2[3]            ; 4       ;
+; FinalProjectPart2:FP2|In2[0]            ; 4       ;
+; FinalProjectPart2:FP2|In2[1]            ; 4       ;
+; FinalProjectPart2:FP2|In2[2]            ; 4       ;
+; FinalProjectPart2:FP2|In3[3]            ; 4       ;
+; FinalProjectPart2:FP2|In3[0]            ; 4       ;
+; FinalProjectPart2:FP2|In3[1]            ; 4       ;
+; FinalProjectPart2:FP2|In3[2]            ; 4       ;
+; FinalProjectPart2:FP2|SD2[0]            ; 8       ;
+; FinalProjectPart2:FP2|SD2[1]            ; 8       ;
+; FinalProjectPart2:FP2|SD2[2]            ; 8       ;
+; FinalProjectPart2:FP2|SD2[3]            ; 8       ;
+; FinalProjectPart2:FP2|SD3[0]            ; 7       ;
+; FinalProjectPart2:FP2|SD3[1]            ; 7       ;
+; FinalProjectPart2:FP2|SD3[2]            ; 7       ;
+; FinalProjectPart2:FP2|SD3[3]            ; 8       ;
+; DotMatrixDisplay:dot|dot_row[0]         ; 1       ;
+; DotMatrixDisplay:dot|dot_row[1]         ; 1       ;
+; DotMatrixDisplay:dot|dot_row[2]         ; 1       ;
+; DotMatrixDisplay:dot|dot_row[3]         ; 1       ;
+; DotMatrixDisplay:dot|dot_row[4]         ; 1       ;
+; DotMatrixDisplay:dot|dot_row[5]         ; 1       ;
+; DotMatrixDisplay:dot|dot_row[6]         ; 1       ;
+; DotMatrixDisplay:dot|dot_row[7]         ; 1       ;
+; Total number of inverted registers = 40 ;         ;
++-----------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -341,9 +399,12 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |FinalProject|clk_div_dot_matrix:div_clk|count[30] ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |FinalProject|FinalProjectPart2:FP2|SD1[0]         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |FinalProject|clk_div_dot_matrix:div_clk|count[29] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |FinalProject|DotMatrixDisplay:dot|dot_col[5]      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |FinalProject|FinalProjectPart2:FP2|SD0[3]         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |FinalProject|FinalProjectPart2:FP2|SD2[0]         ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |FinalProject|FinalProjectPart2:FP2|SD3[2]         ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |FinalProject|FinalProjectPart2:FP2|SD1[2]         ;
 ; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |FinalProject|Seven1                               ;
 ; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |FinalProject|Seven3                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
@@ -377,13 +438,165 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "inputnumber:inNum"                                                                                                     ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; num  ; Output ; Warning  ; Output or bidir port (5 bits) is wider than the port expression (4 bits) it drives; bit(s) "num[4..4]" have no fanouts ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: FinalProjectPart2:FP2|lpm_divide:Mod4 ;
++------------------------+----------------+----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                         ;
++------------------------+----------------+----------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                      ;
+; LPM_WIDTHD             ; 4              ; Untyped                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                      ;
+; CBXI_PARAMETER         ; lpm_divide_42m ; Untyped                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                               ;
++------------------------+----------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: FinalProjectPart2:FP2|lpm_divide:Mod1 ;
++------------------------+----------------+----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                         ;
++------------------------+----------------+----------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                      ;
+; LPM_WIDTHD             ; 4              ; Untyped                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                      ;
+; CBXI_PARAMETER         ; lpm_divide_42m ; Untyped                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                               ;
++------------------------+----------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: FinalProjectPart2:FP2|lpm_divide:Mod5 ;
++------------------------+----------------+----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                         ;
++------------------------+----------------+----------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                      ;
+; LPM_WIDTHD             ; 4              ; Untyped                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                      ;
+; CBXI_PARAMETER         ; lpm_divide_42m ; Untyped                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                               ;
++------------------------+----------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: FinalProjectPart2:FP2|lpm_divide:Mod2 ;
++------------------------+----------------+----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                         ;
++------------------------+----------------+----------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                      ;
+; LPM_WIDTHD             ; 4              ; Untyped                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                      ;
+; CBXI_PARAMETER         ; lpm_divide_42m ; Untyped                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                               ;
++------------------------+----------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: FinalProjectPart2:FP2|lpm_divide:Mod6 ;
++------------------------+----------------+----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                         ;
++------------------------+----------------+----------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                      ;
+; LPM_WIDTHD             ; 4              ; Untyped                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                      ;
+; CBXI_PARAMETER         ; lpm_divide_42m ; Untyped                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                               ;
++------------------------+----------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: FinalProjectPart2:FP2|lpm_divide:Mod3 ;
++------------------------+----------------+----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                         ;
++------------------------+----------------+----------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                      ;
+; LPM_WIDTHD             ; 4              ; Untyped                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                      ;
+; CBXI_PARAMETER         ; lpm_divide_42m ; Untyped                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                               ;
++------------------------+----------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: FinalProjectPart2:FP2|lpm_divide:Mod0 ;
++------------------------+----------------+----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                         ;
++------------------------+----------------+----------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                      ;
+; LPM_WIDTHD             ; 4              ; Untyped                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                      ;
+; CBXI_PARAMETER         ; lpm_divide_42m ; Untyped                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                               ;
++------------------------+----------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -391,24 +604,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 53                          ;
+; arriav_ff             ; 119                         ;
 ;     CLR               ; 17                          ;
+;     ENA               ; 17                          ;
+;     ENA CLR           ; 49                          ;
 ;     SCLR              ; 33                          ;
 ;     plain             ; 3                           ;
-; arriav_lcell_comb     ; 67                          ;
-;     arith             ; 32                          ;
-;         1 data inputs ; 32                          ;
-;     normal            ; 35                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 9                           ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 11                          ;
-;         4 data inputs ; 1                           ;
-;         6 data inputs ; 6                           ;
+; arriav_lcell_comb     ; 356                         ;
+;     arith             ; 65                          ;
+;         0 data inputs ; 6                           ;
+;         1 data inputs ; 49                          ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 3                           ;
+;     extend            ; 7                           ;
+;         7 data inputs ; 7                           ;
+;     normal            ; 264                         ;
+;         1 data inputs ; 16                          ;
+;         2 data inputs ; 25                          ;
+;         3 data inputs ; 59                          ;
+;         4 data inputs ; 58                          ;
+;         5 data inputs ; 54                          ;
+;         6 data inputs ; 52                          ;
+;     shared            ; 20                          ;
+;         0 data inputs ; 4                           ;
+;         1 data inputs ; 16                          ;
 ; boundary_port         ; 58                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.44                        ;
+; Average LUT depth     ; 2.66                        ;
 +-----------------------+-----------------------------+
 
 
@@ -417,7 +641,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -427,13 +651,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Dec 30 10:48:54 2022
+    Info: Processing started: Fri Dec 30 13:08:31 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProject -c FinalProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file finalproject.v
     Info (12023): Found entity 1: FinalProject File: C:/Verilog/FinalProject/FinalProject.v Line: 1
-Warning (10229): Verilog HDL Expression warning at FinalProjectPart2.v(191): truncated literal to match 2 bits File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 191
 Info (12021): Found 1 design units, including 1 entities, in source file finalprojectpart2.v
     Info (12023): Found entity 1: FinalProjectPart2 File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file inputnumber.v
@@ -450,21 +673,7 @@ Critical Warning (10846): Verilog HDL Instantiation warning at FinalProject.v(33
 Critical Warning (10846): Verilog HDL Instantiation warning at FinalProject.v(36): instance has no name File: C:/Verilog/FinalProject/FinalProject.v Line: 36
 Info (12127): Elaborating entity "FinalProject" for the top level hierarchy
 Info (12128): Elaborating entity "inputnumber" for hierarchy "inputnumber:inNum" File: C:/Verilog/FinalProject/FinalProject.v Line: 20
-Warning (10230): Verilog HDL assignment warning at inputnumber.v(24): truncated value with size 32 to match size of target (5) File: C:/Verilog/FinalProject/inputnumber.v Line: 24
-Warning (10230): Verilog HDL assignment warning at inputnumber.v(20): truncated value with size 32 to match size of target (5) File: C:/Verilog/FinalProject/inputnumber.v Line: 20
-Warning (10230): Verilog HDL assignment warning at inputnumber.v(34): truncated value with size 32 to match size of target (5) File: C:/Verilog/FinalProject/inputnumber.v Line: 34
-Warning (10240): Verilog HDL Always Construct warning at inputnumber.v(13): inferring latch(es) for variable "checknum", which holds its previous value in one or more paths through the always construct File: C:/Verilog/FinalProject/inputnumber.v Line: 13
-Warning (10240): Verilog HDL Always Construct warning at inputnumber.v(13): inferring latch(es) for variable "num", which holds its previous value in one or more paths through the always construct File: C:/Verilog/FinalProject/inputnumber.v Line: 13
-Warning (10240): Verilog HDL Always Construct warning at inputnumber.v(13): inferring latch(es) for variable "pushed", which holds its previous value in one or more paths through the always construct File: C:/Verilog/FinalProject/inputnumber.v Line: 13
-Warning (10240): Verilog HDL Always Construct warning at inputnumber.v(13): inferring latch(es) for variable "test", which holds its previous value in one or more paths through the always construct File: C:/Verilog/FinalProject/inputnumber.v Line: 13
-Warning (10240): Verilog HDL Always Construct warning at inputnumber.v(13): inferring latch(es) for variable "nonerror", which holds its previous value in one or more paths through the always construct File: C:/Verilog/FinalProject/inputnumber.v Line: 13
-Info (10041): Inferred latch for "nonerror" at inputnumber.v(60) File: C:/Verilog/FinalProject/inputnumber.v Line: 60
-Info (10041): Inferred latch for "pushed" at inputnumber.v(60) File: C:/Verilog/FinalProject/inputnumber.v Line: 60
-Info (10041): Inferred latch for "num[0]" at inputnumber.v(60) File: C:/Verilog/FinalProject/inputnumber.v Line: 60
-Info (10041): Inferred latch for "num[1]" at inputnumber.v(60) File: C:/Verilog/FinalProject/inputnumber.v Line: 60
-Info (10041): Inferred latch for "num[2]" at inputnumber.v(60) File: C:/Verilog/FinalProject/inputnumber.v Line: 60
-Info (10041): Inferred latch for "num[3]" at inputnumber.v(60) File: C:/Verilog/FinalProject/inputnumber.v Line: 60
-Info (10041): Inferred latch for "num[4]" at inputnumber.v(60) File: C:/Verilog/FinalProject/inputnumber.v Line: 60
+Info (10264): Verilog HDL Case Statement information at inputnumber.v(16): all case item expressions in this case statement are onehot File: C:/Verilog/FinalProject/inputnumber.v Line: 16
 Info (12128): Elaborating entity "FinalProjectPart2" for hierarchy "FinalProjectPart2:FP2" File: C:/Verilog/FinalProject/FinalProject.v Line: 24
 Warning (10230): Verilog HDL assignment warning at FinalProjectPart2.v(34): truncated value with size 32 to match size of target (16) File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 34
 Warning (10240): Verilog HDL Always Construct warning at FinalProjectPart2.v(28): inferring latch(es) for variable "answer", which holds its previous value in one or more paths through the always construct File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 28
@@ -496,56 +705,54 @@ Info (10041): Inferred latch for "answer[14]" at FinalProjectPart2.v(28) File: C
 Info (10041): Inferred latch for "answer[15]" at FinalProjectPart2.v(28) File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 28
 Info (12128): Elaborating entity "clk_div_dot_matrix" for hierarchy "clk_div_dot_matrix:div_clk" File: C:/Verilog/FinalProject/FinalProject.v Line: 27
 Info (12128): Elaborating entity "DotMatrixDisplay" for hierarchy "DotMatrixDisplay:dot" File: C:/Verilog/FinalProject/FinalProject.v Line: 29
-Warning (10230): Verilog HDL assignment warning at DotMatrixDisplay.v(52): truncated value with size 32 to match size of target (3) File: C:/Verilog/FinalProject/DotMatrixDisplay.v Line: 52
+Warning (10230): Verilog HDL assignment warning at DotMatrixDisplay.v(54): truncated value with size 32 to match size of target (3) File: C:/Verilog/FinalProject/DotMatrixDisplay.v Line: 54
 Info (12128): Elaborating entity "ABSevenDisplay" for hierarchy "ABSevenDisplay:comb_3" File: C:/Verilog/FinalProject/FinalProject.v Line: 33
 Info (12128): Elaborating entity "NumberSevenDisplay" for hierarchy "NumberSevenDisplay:comb_4" File: C:/Verilog/FinalProject/FinalProject.v Line: 36
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Seven0[6]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven1[0]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven1[1]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven1[2]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven1[3]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven1[4]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven1[5]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven1[6]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven2[0]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven2[1]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven2[2]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven2[3]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven2[4]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven2[5]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven2[6]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven3[0]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven3[1]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven3[2]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven3[3]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven3[4]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven3[5]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
-    Warning (13410): Pin "Seven3[6]" is stuck at VCC File: C:/Verilog/FinalProject/FinalProject.v Line: 8
+Info (278001): Inferred 7 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "FinalProjectPart2:FP2|Mod4" File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 52
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "FinalProjectPart2:FP2|Mod1" File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 45
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "FinalProjectPart2:FP2|Mod5" File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 53
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "FinalProjectPart2:FP2|Mod2" File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 46
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "FinalProjectPart2:FP2|Mod6" File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 54
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "FinalProjectPart2:FP2|Mod3" File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 47
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "FinalProjectPart2:FP2|Mod0" File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 44
+Info (12130): Elaborated megafunction instantiation "FinalProjectPart2:FP2|lpm_divide:Mod4" File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 52
+Info (12133): Instantiated megafunction "FinalProjectPart2:FP2|lpm_divide:Mod4" with the following parameter: File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 52
+    Info (12134): Parameter "LPM_WIDTHN" = "4"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_42m.tdf
+    Info (12023): Found entity 1: lpm_divide_42m File: C:/Verilog/FinalProject/db/lpm_divide_42m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_7kh File: C:/Verilog/FinalProject/db/sign_div_unsign_7kh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kse.tdf
+    Info (12023): Found entity 1: alt_u_div_kse File: C:/Verilog/FinalProject/db/alt_u_div_kse.tdf Line: 22
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "FinalProjectPart2:FP2|A1[0]" is converted into an equivalent circuit using register "FinalProjectPart2:FP2|A1[0]~_emulated" and latch "FinalProjectPart2:FP2|A1[0]~1" File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 52
+    Warning (13310): Register "FinalProjectPart2:FP2|A1[1]" is converted into an equivalent circuit using register "FinalProjectPart2:FP2|A1[1]~_emulated" and latch "FinalProjectPart2:FP2|A1[1]~5" File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 52
+    Warning (13310): Register "FinalProjectPart2:FP2|A1[2]" is converted into an equivalent circuit using register "FinalProjectPart2:FP2|A1[2]~_emulated" and latch "FinalProjectPart2:FP2|A1[2]~9" File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 52
+    Warning (13310): Register "FinalProjectPart2:FP2|A1[3]" is converted into an equivalent circuit using register "FinalProjectPart2:FP2|A1[3]~_emulated" and latch "FinalProjectPart2:FP2|A1[3]~13" File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 52
+    Warning (13310): Register "FinalProjectPart2:FP2|A2[0]" is converted into an equivalent circuit using register "FinalProjectPart2:FP2|A2[0]~_emulated" and latch "FinalProjectPart2:FP2|A2[0]~1" File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 52
+    Warning (13310): Register "FinalProjectPart2:FP2|A2[1]" is converted into an equivalent circuit using register "FinalProjectPart2:FP2|A2[1]~_emulated" and latch "FinalProjectPart2:FP2|A2[1]~5" File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 52
+    Warning (13310): Register "FinalProjectPart2:FP2|A2[2]" is converted into an equivalent circuit using register "FinalProjectPart2:FP2|A2[2]~_emulated" and latch "FinalProjectPart2:FP2|A2[2]~9" File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 52
+    Warning (13310): Register "FinalProjectPart2:FP2|A2[3]" is converted into an equivalent circuit using register "FinalProjectPart2:FP2|A2[3]~_emulated" and latch "FinalProjectPart2:FP2|A2[3]~13" File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 52
+    Warning (13310): Register "FinalProjectPart2:FP2|A3[0]" is converted into an equivalent circuit using register "FinalProjectPart2:FP2|A3[0]~_emulated" and latch "FinalProjectPart2:FP2|A3[0]~1" File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 52
+    Warning (13310): Register "FinalProjectPart2:FP2|A3[1]" is converted into an equivalent circuit using register "FinalProjectPart2:FP2|A3[1]~_emulated" and latch "FinalProjectPart2:FP2|A3[1]~5" File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 52
+    Warning (13310): Register "FinalProjectPart2:FP2|A3[2]" is converted into an equivalent circuit using register "FinalProjectPart2:FP2|A3[2]~_emulated" and latch "FinalProjectPart2:FP2|A3[2]~9" File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 52
+    Warning (13310): Register "FinalProjectPart2:FP2|A3[3]" is converted into an equivalent circuit using register "FinalProjectPart2:FP2|A3[3]~_emulated" and latch "FinalProjectPart2:FP2|A3[3]~13" File: C:/Verilog/FinalProject/FinalProjectPart2.v Line: 52
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 31 registers lost all their fanouts during netlist optimizations.
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 10 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Verilog/FinalProject/FinalProject.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Verilog/FinalProject/FinalProject.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Verilog/FinalProject/FinalProject.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Verilog/FinalProject/FinalProject.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Verilog/FinalProject/FinalProject.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Verilog/FinalProject/FinalProject.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Verilog/FinalProject/FinalProject.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Verilog/FinalProject/FinalProject.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Verilog/FinalProject/FinalProject.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Verilog/FinalProject/FinalProject.v Line: 5
-Info (21057): Implemented 122 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 424 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 44 output pins
-    Info (21061): Implemented 64 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 52 warnings
-    Info: Peak virtual memory: 4906 megabytes
-    Info: Processing ended: Fri Dec 30 10:49:14 2022
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:47
+    Info (21061): Implemented 366 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4914 megabytes
+    Info: Processing ended: Fri Dec 30 13:08:58 2022
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:55
 
 

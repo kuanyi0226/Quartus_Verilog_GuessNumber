@@ -1,5 +1,5 @@
-module DotMatrixDisplay(clk_div, rst, inCorrect, ansCorrect, dot_row, dot_col);
-input clk_div, rst, inCorrect, ansCorrect;
+module DotMatrixDisplay(reachS5,clk_div, rst, inCorrect, ansCorrect, dot_row, dot_col);
+input clk_div, rst, inCorrect, ansCorrect, reachS5;
 output [7:0]dot_row;
 output [7:0]dot_col;
 reg [7:0]dot_row;
@@ -10,32 +10,34 @@ reg [1:0] signal;
 
 parameter wrong = 2'd0, correct = 2'd1, error = 2'd2, ok = 2'd3;
 
-always@ (inCorrect or ansCorrect)
+always@ (inCorrect or ansCorrect or reachS5)
 begin
-    if (inCorrect == 0)
-    begin
-        signal = error;
-    end
+	if(!reachS5)begin
+		if (inCorrect == 0)
+			 begin
+				  signal = error;
+			 end
 
-    else if (inCorrect == 1)
-    begin
-        signal = ok;
-    end
+			 else 
+			 begin
+				  signal = ok;
+			 end
+		 		
+	end
+	
+	else begin
+		if (ansCorrect == 0)
+		 begin
+			  signal = wrong;;
+		 end
+
+		 else
+		 begin
+			  signal = correct;
+		 end
+	end  
+
     
-    else if (ansCorrect == 0)
-    begin
-        signal = wrong;;
-    end
-
-    else if (ansCorrect == 1)
-    begin
-        signal = correct;
-    end
-
-    else
-    begin
-        signal = error;
-    end
 end
 
 always@ (posedge clk_div or negedge rst)
@@ -82,7 +84,7 @@ begin
                 case (row_count)
                     3'd0: dot_col <= 8'b10000001;
                     3'd1: dot_col <= 8'b01000010;
-                    3'd2: dot_col <= 8'b00100110;
+                    3'd2: dot_col <= 8'b00100100;
                     3'd3: dot_col <= 8'b00011000;
                     3'd4: dot_col <= 8'b00011000;
                     3'd5: dot_col <= 8'b00100100;
@@ -95,12 +97,12 @@ begin
             begin
                 case (row_count)
                     3'd0: dot_col <= 8'b00000000;
-                    3'd1: dot_col <= 8'b10011111;
-                    3'd2: dot_col <= 8'b11011001;
-                    3'd3: dot_col <= 8'b11011001;
-                    3'd4: dot_col <= 8'b10111001;
-                    3'd5: dot_col <= 8'b10111001;
-                    3'd6: dot_col <= 8'b10011111;
+                    3'd1: dot_col <= 8'b10010111;
+                    3'd2: dot_col <= 8'b11010101;
+                    3'd3: dot_col <= 8'b11010101;
+                    3'd4: dot_col <= 8'b10110101;
+                    3'd5: dot_col <= 8'b10110101;
+                    3'd6: dot_col <= 8'b10010111;
                     3'd7: dot_col <= 8'b00000000;
                 endcase
             end
@@ -109,12 +111,12 @@ begin
             begin
                 case (row_count)
                     3'd0: dot_col <= 8'b00000000;
-                    3'd1: dot_col <= 8'b11111001;
-                    3'd2: dot_col <= 8'b10011010;
-                    3'd3: dot_col <= 8'b10011100;
-                    3'd4: dot_col <= 8'b10011100;
-                    3'd5: dot_col <= 8'b10011010;
-                    3'd6: dot_col <= 8'b10011001;
+                    3'd1: dot_col <= 8'b11101001;
+                    3'd2: dot_col <= 8'b10101010;
+                    3'd3: dot_col <= 8'b10101100;
+                    3'd4: dot_col <= 8'b10101100;
+                    3'd5: dot_col <= 8'b10101010;
+                    3'd6: dot_col <= 8'b11101001;
                     3'd7: dot_col <= 8'b00000000;
                 endcase
             end
