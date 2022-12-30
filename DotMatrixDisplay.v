@@ -1,10 +1,12 @@
 module DotMatrixDisplay(clk_div, rst, inCorrect, ansCorrect, dot_row, dot_col);
-input clk_div, rst, signal;
+input clk_div, rst, inCorrect, ansCorrect;
 output [7:0]dot_row;
 output [7:0]dot_col;
 reg [7:0]dot_row;
 reg [7:0]dot_col;
-reg [1:0]signal;
+
+reg [2:0] row_count;
+reg [1:0] signal;
 
 parameter wrong = 2'd0, correct = 2'd1, error = 2'd2, ok = 2'd3;
 
@@ -42,7 +44,6 @@ begin
 	begin
 		dot_row <= 8'b11111111;
 		dot_col <= 8'b00000000;
-		row_count <= 0;
 	end
     
 	else
@@ -61,8 +62,8 @@ begin
 			3'd7: dot_row <= 8'b11111110;
 		endcase
 
-        case (signal):
-            correct:
+        case (signal)
+            correct: //O
             begin
                 case (row_count)
                     3'd0: dot_col <= 8'b11111111;
@@ -76,7 +77,7 @@ begin
                 endcase
             end
 
-            wrong:
+            wrong: //X
             begin
                 case (row_count)
                     3'd0: dot_col <= 8'b10000001;
@@ -90,7 +91,7 @@ begin
                 endcase
             end
 
-            error:
+            error: //no
             begin
                 case (row_count)
                     3'd0: dot_col <= 8'b00000000;
@@ -104,7 +105,7 @@ begin
                 endcase
             end
 
-            ok:
+            ok: //OK
             begin
                 case (row_count)
                     3'd0: dot_col <= 8'b00000000;
